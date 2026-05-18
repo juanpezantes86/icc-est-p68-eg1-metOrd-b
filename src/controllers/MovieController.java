@@ -20,29 +20,22 @@ public class MovieController {
             intercambio = false;
             for(int j = 0; j < tam - 1; j++) {
                 if(movies[j].getTitle().compareTo(movies[j+1].getTitle()) > 0) {
-                   Movie temp = movies[j];
-                   movies[j] = movies[j+1];
-                   movies[j+1] = temp;
-                    
+                    Movie temp = movies[j];
+                    movies[j] = movies[j+1];
+                    movies[j+1] = temp;
                     intercambio = true;
                 }
-
             }
-
             if(!intercambio) {
                 break;
             }
         }
-
-
-
-
     }
 
     public void printMovies(Movie[] movies) {
         int tam = movies.length;
         for(int i=0; i<tam; i++) {
-            System.out.println(movies[i].getTitle() + " " + "(" + movies[i].getYear() + ")");
+            System.out.println(i+1 + ". " +movies[i].getTitle() + " " + "(" +  movies[i].getYear() + ")");
         }
     }
 

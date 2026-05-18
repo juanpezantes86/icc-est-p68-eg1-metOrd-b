@@ -46,16 +46,16 @@ public class App {
         movies[23] = new Movie("the avengers", 2013);
         movies[24] = new Movie("Iron Man", 2008);
 
-
         MovieController controlador = new MovieController();
         System.out.println("ANTES");
         controlador.printMovies(movies);
 
         System.out.println();
 
-        System.out.println("DESPUES");
+        System.out.println("DESPUES (case-sensitive");
         controlador.sortByTitle(movies);
         controlador.printMovies(movies);
+
 
         return movies;
 
