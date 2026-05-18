@@ -21,13 +21,18 @@ public class MovieController {
             int j = i - 1;
 
             while (j >= 0 && movies[j].getTitle().compareTo(actual.getTitle()) > 0) {
-                movies[j + 1] = movies[j];
+                movies[j + 1] = movies[j]; 
                 j--;
             }
             movies[j + 1] = actual;
-        }
+        }  
+    
 
+ 
+        
     }
+
+
 
     public void printMovies(Movie[] movies) {
         int tam = movies.length;

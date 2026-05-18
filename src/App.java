@@ -52,7 +52,7 @@ public class App {
 
         System.out.println();
 
-        System.out.println("DESPUES (case-sensitive");
+        System.out.println("DESPUES (case-sensitive)");
         controlador.sortByTitle(movies);
         controlador.printMovies(movies);
 
