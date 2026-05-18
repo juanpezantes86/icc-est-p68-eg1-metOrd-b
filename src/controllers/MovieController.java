@@ -14,22 +14,21 @@ public class MovieController {
      */
     public void sortByTitle(Movie[] movies) {
         int tam = movies.length;
-        boolean intercambio;
-
-        for(int i = 0; i < tam - 1; i++) {
-            intercambio = false;
-            for(int j = 0; j < tam - 1; j++) {
-                if(movies[j].getTitle().compareTo(movies[j+1].getTitle()) > 0) {
-                    Movie temp = movies[j];
-                    movies[j] = movies[j+1];
-                    movies[j+1] = temp;
-                    intercambio = true;
+        
+        for(int i=0; i<tam - 1; i++) {
+            int indiceMenor = i;
+            for(int j=i+1; j<tam; j++) {
+                if(movies[j].getTitle().compareTo(movies[indiceMenor].getTitle())<0) {
+                    indiceMenor = j;
                 }
             }
-            if(!intercambio) {
-                break;
+            if(indiceMenor != i) {
+                Movie temp = movies[i];
+                movies[i] = movies[indiceMenor];
+                movies[indiceMenor] = temp;
             }
         }
+
     }
 
     public void printMovies(Movie[] movies) {
